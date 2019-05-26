@@ -1,0 +1,9 @@
+@import "_home.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+}
