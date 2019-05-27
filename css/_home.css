@@ -4,7 +4,7 @@
 
 body {
   background-color: #e9ebee;
-  font-size: 22px;
+  font-size: 20px;
   font-family: arial, sans-serif;
 }
 
@@ -40,6 +40,7 @@ body {
 .login-register a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
   border: white solid 2px;
   padding: 10px;
   border-radius: 15px;
@@ -63,7 +64,7 @@ align-items: center;
 
 .main-right img {
   border-radius: 10%;
-  width: 90%;
+  width: 80%;
   padding: 20px;
 }
 
@@ -73,8 +74,26 @@ align-items: center;
 }
 
 .main-bottom span {
-  margin-left: 70%
+  margin-left: 70%;
 }
+
+.footer {
+  display: flex;
+  background-color: rgb(107, 55, 148);
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.foot
 
 
 /*.main-l-r {
