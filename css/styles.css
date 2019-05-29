@@ -1,4 +1,6 @@
 @import "_home.css";
+@import "_profile.css";
+@import "_timeline.css";
 
 * {
   box-sizing: border-box;
@@ -6,4 +8,7 @@
 
 body {
   margin: auto;
+  background-color: #e9ebee;
+  font-size: 20px;
+  font-family: arial, sans-serif;
 }

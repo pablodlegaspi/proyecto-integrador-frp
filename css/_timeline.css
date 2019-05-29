@@ -1,0 +1,79 @@
+.header-timeline {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /*background-color: red;*/
+  border-bottom: solid 10px rgb(107, 55, 148);
+  background-color: rgb(46, 46, 46);
+  padding: 10px;
+}
+
+.sub-header-timeline {
+  max-width: 1200px;
+  width: 100%;
+  /*background-color: blue;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-header-timeline a img {
+  border-radius: 100%;
+  padding-left: 10px;
+}
+
+.notificaciones-timeline a img {
+  border-radius: 100%;
+}
+
+.menu-timeline {
+  color: white;
+}
+
+.menu-timeline a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-timeline a:hover {
+  background-color: grey;
+}
+
+.perfil-timeline {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.perfil-timeline a {
+  color: white;
+  text-decoration: none;
+}
+
+.perfil-timeline a img {
+  border-radius: 100%;
+  padding-right: 10px;
+}
+
+.buscador-area {
+  background-color: white;
+  border: solid 2px grey;
+  padding: 5px 10px;
+  width: 30%;
+  /* border-radius: 10%; ESTO NO FUNCIONA BIEN POR EL INPUT SUPONGO */
+}
+
+.buscador {
+  border-style: none;
+  width: 100%
+}
+
+.menu-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
