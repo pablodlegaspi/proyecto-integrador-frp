@@ -1,6 +1,7 @@
 @import "_home.css";
 @import "_profile.css";
 @import "_timeline.css";
+@import "_faq.css";
 
 * {
   box-sizing: border-box;
