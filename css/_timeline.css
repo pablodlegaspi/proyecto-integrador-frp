@@ -103,12 +103,74 @@
 }
 
 .timeline-left {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.contenido-usuario {
   border: 1px black solid;
   border-radius: 10px;
-  width: 20%;
+  width: 100%;
   background-color: white;
 }
 
+h6 {
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+hr {
+  margin: 0;
+}
+
+.contenido-usuario {
+  margin-bottom: 10px;
+}
+
+.proyecto {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+}
+
+.proyecto-izq {
+  width: 30%;
+}
+
+.proyecto-izq a img {
+  padding-left: 5px;
+  border-radius: 10px;
+}
+
+.proyecto-der {
+  width: 70%;
+}
+
+.proyecto-der a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(107, 55, 148);
+}
+
+.proyecto-der a:hover {
+  text-decoration: underline;
+}
+
+.proyecto-der p {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(148, 148, 148);
+}
 
 
 .timeline-center {
@@ -154,6 +216,7 @@
 .usuario-foto-publicacion a span {
   padding-right: 5px;
   color: rgb(107, 55, 148);
+  font-weight: bold;
 }
 
 .usuario-foto-publicacion a span:hover {
@@ -201,6 +264,7 @@
 }
 
 .ir-a-publicacion a {
+  font-weight: bold;
   text-decoration: none;
   color: black;
 }
