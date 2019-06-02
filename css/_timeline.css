@@ -20,7 +20,6 @@
 
 .sub-header-timeline a img {
   border-radius: 100%;
-  padding-left: 10px;
 }
 
 .notificaciones-timeline a img {
@@ -47,22 +46,30 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  padding: 4px;
+  padding: 8px;
   border-radius: 10px;
 }
 
-.perfil-timeline a {
+.perfil-timeline a span {
   color: white;
+  padding-right: 5px;
+}
+
+.perfil-timeline a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.foto-en-timeline {
+  padding: 5px;
+  background-color: white;
 }
 
 .perfil-timeline:hover {
   background-color: rgb(107, 55, 148);
-}
-
-.perfil-timeline a img {
-  border-radius: 100%;
-  padding-right: 10px;
 }
 
 .buscador-area {
@@ -102,6 +109,8 @@
   background-color: white;
 }
 
+
+
 .timeline-center {
   display: flex;
   flex-direction: column;
@@ -122,15 +131,97 @@
   background-color: white;
 }
 
+
+
 .publicacion {
   width: 100%;
-  border: 1px black solid;
+  border: 2px black solid;
   border-radius: 10px;
   background-color: white;
   margin-bottom: 20px;
   padding: 5px;
 }
 
-.publicacion h6 {
-  margin: 0;
+.publicacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.usuario-foto-publicacion {
+  width: 100%;
+}
+.usuario-foto-publicacion a span {
+  padding-right: 5px;
+  color: rgb(107, 55, 148);
+}
+
+.usuario-foto-publicacion a span:hover {
+  text-decoration: underline;
+}
+
+.usuario-foto-publicacion a {
+  text-decoration: none;
+}
+
+.foto-perfil-en-publicacion {
+  padding: 5px;
+  background-color: white;
+}
+
+.fecha-hora a {
+  text-decoration: none;
+  color: rgb(148, 148, 148);
+  font-size: 14px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.fecha-hora a:hover {
+  text-decoration: underline;
+}
+
+.texto-publicacion {
+  padding: 10px;
+}
+
+.ver-publ-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.ir-a-publicacion {
+  background-color: #e9ebee;
+  padding: 8px;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+.ir-a-publicacion a {
+  text-decoration: none;
+  color: black;
+}
+
+.ir-a-publicacion:hover {
+  background-color: rgb(107, 55, 148);
+}
+
+.ir-a-publicacion a:hover {
+  color: white;
+}
+
+.multimedia-publicacion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multimedia-publicacion img {
+  width: 80%;
+  padding: 10px;
+  border-radius: 30px;
 }
