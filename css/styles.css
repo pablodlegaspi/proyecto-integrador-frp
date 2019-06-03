@@ -2,6 +2,8 @@
 @import "_profile.css";
 @import "_timeline.css";
 @import "_faq.css";
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans&display=swap";
 
 * {
   box-sizing: border-box;
@@ -10,6 +12,6 @@
 body {
   margin: auto;
   background-color: #e9ebee;
-  font-size: 20px;
-  font-family: arial, sans-serif;
+  font-size: 18px;
+  font-family: Open Sans, sans-serif;
 }
