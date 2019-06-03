@@ -116,21 +116,18 @@
   border-radius: 10px;
   width: 100%;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 h6 {
+  font-size: 14px;
   padding: 5px;
   margin: 0;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 hr {
   margin: 0;
-}
-
-.contenido-usuario {
-  margin-bottom: 10px;
 }
 
 .proyecto {
@@ -168,10 +165,73 @@ hr {
 
 .proyecto-der p {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(148, 148, 148);
 }
 
+.proyecto hr {
+  width: 100%;
+  margin: 0;
+  display: inline;
+}
+
+.timeline-right {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+
+.sugerencias {
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.crear-nuevo {
+  padding: 5px;
+}
+
+.crear-nuevo i {
+  color: rgb(107, 55, 148);
+}
+
+.crear-nuevo a {
+  text-decoration: none;
+  color: rgb(107, 55, 148);
+}
+
+.crear-nuevo a:hover {
+  text-decoration: underline;
+}
+
+.sugerencia-contacto {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sugerencia-contacto a img {
+  margin-right: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.sugerencia-contacto a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(107, 55, 148);
+}
+
+.sugerencia-contacto a:hover {
+  text-decoration: underline;
+}
 
 .timeline-center {
   display: flex;
@@ -182,19 +242,6 @@ hr {
   margin: 0 2.5%
 }
 
-.timeline-right {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 1px black solid;
-  border-radius: 10px;
-  width: 20%;
-  background-color: white;
-}
-
-
-
 .publicacion {
   width: 100%;
   border: 2px black solid;
@@ -202,14 +249,12 @@ hr {
   background-color: white;
   margin-bottom: 20px;
   padding: 5px;
-}
-
-.publicacion {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .usuario-foto-publicacion {
   width: 100%;
 }
@@ -225,6 +270,8 @@ hr {
 
 .usuario-foto-publicacion a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .foto-perfil-en-publicacion {
@@ -235,7 +282,7 @@ hr {
 .fecha-hora a {
   text-decoration: none;
   color: rgb(148, 148, 148);
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 5px;
   padding-bottom: 5px;
 }
