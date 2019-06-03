@@ -2,6 +2,8 @@
 @import "_profile.css";
 @import "_timeline.css";
 @import "_faq.css";
+@import "_login.css";
+@import "_register.css";
 
 * {
   box-sizing: border-box;
