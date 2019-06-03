@@ -1,10 +1,14 @@
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans&display=swap";
+
 @import "_home.css";
 @import "_profile.css";
 @import "_timeline.css";
 @import "_faq.css";
 @import "_tyc.css";
-@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
-@import "https://fonts.googleapis.com/css?family=Open+Sans&display=swap";
+@import "_login.css";
+@import "_register.css";
+
 
 * {
   box-sizing: border-box;
