@@ -172,11 +172,6 @@ padding-top: 20px;
     margin-right: 25px;
   }
 
-}
-
-
-@media (max-width: 1024px) {
-
   .header-home {
     flex-direction: column;
     flex-wrap: wrap;
