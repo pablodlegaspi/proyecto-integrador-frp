@@ -124,6 +124,7 @@
 }
 
 .timeline-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -380,13 +381,18 @@ hr {
 
 @media (max-width: 1024px) {
 
-    .timeline-right {
-    width: 25%;
+  .timeline-right {
+    width: 0%;
     display: none;
   }
 
+  .timeline-left {
+    width: 30%
+  }
+
   .timeline-center {
-    width: 70%;
+    width: 60%;
+    margin: 0 0 0 5%;
   }
 
 @media (max-width: 768px) {
@@ -400,7 +406,8 @@ hr {
   }
 
   .timeline-center {
-    width: 100%;
+    width: 90%;
+    margin: 0;
   }
 
   .buscador-area {
