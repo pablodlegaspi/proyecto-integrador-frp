@@ -1,0 +1,128 @@
+@import "css/_timeline.css";
+
+.perfil-container {
+  margin: auto;
+  background-color: white;
+  border: 2px black solid;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.foto-nombre-y-redes {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid black;
+}
+
+.perfil-contenido {
+  width: 100%;
+  border: 1px black solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.datos-en-perfil {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.datos-en-perfil a {
+  text-decoration: none;
+  color: rgb(107, 55, 148);
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.datos-en-perfil ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.datos-en-perfil li {
+  display: inline;
+  margin-right: 3px;
+}
+
+.datos-en-perfil li a {
+  transition: transform .3s;
+}
+
+.datos-en-perfil li a:hover {
+  transform: scale(2);
+}
+
+.fb a {
+  color: #4267b2;
+}
+
+.tw a {
+  color: #1da1f2;
+}
+
+.ig a {
+  color: #000000;
+}
+
+.li a {
+  color: #0077B5;
+}
+
+.datos-en-perfil li:last-child {
+  margin-right: 0;
+}
+
+.descripcion-perfil {
+  width: 40%;
+}
+
+.menu-perfil {
+  width: 20%;
+  position: relative;
+  right: 0;
+}
+
+.menu-perfil ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-perfil li {
+  padding: 6.1px;
+  border-bottom: 1px solid black;
+}
+
+.menu-perfil li:last-child {
+  border-bottom: none;
+}
+
+.menu-perfil li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.menu-perfil li:hover {
+  background-color: rgb(107, 55, 148);
+  transition: background-color .3s ease-in;
+}
+
+.menu-perfil li a:hover {
+  color: white;
+}

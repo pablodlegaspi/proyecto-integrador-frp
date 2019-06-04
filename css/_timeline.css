@@ -357,6 +357,7 @@ hr {
 
 .ir-a-publicacion:hover {
   background-color: rgb(107, 55, 148);
+  transition: background-color .3s ease-in;
 }
 
 .ir-a-publicacion a:hover {
