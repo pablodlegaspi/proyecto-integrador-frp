@@ -1,7 +1,10 @@
+.login-box-container {
+  width: 100%;
+}
+
 
 .login-vecino{
   margin-left: 16px;
-  
 }
 
  .login-logo {
@@ -51,4 +54,16 @@
 
 .login-condiciones:hover, .registro:hover{
   text-decoration: underline;
+}
+
+.footer-home {
+  width: 100%;
+}
+
+@media (max-width: 420px) {
+
+  .login-box {
+    width: 100%;
+  }
+
 }

@@ -7,7 +7,6 @@
 
 .crea-tu-cuenta{
   margin-left: 50px;
-
 }
 
  .register-logo {
@@ -79,4 +78,12 @@
 text-decoration: none;
 color: black;
 font-style: italic;
+}
+
+@media (max-width: 510px) {
+
+  .register-box {
+    width: 100%;
+  }
+
 }
