@@ -22,7 +22,7 @@ h1 {
   border-bottom: solid 10px rgb(107, 55, 148);
 }
 a.logo-home {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .logo-home img {
@@ -98,7 +98,8 @@ padding-top: 20px;
   margin-right: 60px;
 }
 
-.footer-home {
+.footer {
+  width: 100%;
   display: flex;
   background-color: rgb(107, 55, 148);
   align-items: stretch;
@@ -107,7 +108,7 @@ padding-top: 20px;
   padding: 40px;
 }
 
-.footer-home a {
+.footer a {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -155,7 +156,7 @@ padding-top: 20px;
     align-self: flex-end;
   }
 
-  .footer-home {
+  .footer {
     display: flex;
     background-color: rgb(107, 55, 148);
     align-items: center;
@@ -164,7 +165,7 @@ padding-top: 20px;
     padding: 40px;
   }
 
-  .footer-home a {
+  .footer a {
     position: relative;
     text-decoration: none;
     color: white;
@@ -198,7 +199,7 @@ padding-top: 20px;
 
 @media (max-width: 592px) {
 
-  .footer-home {
+  .footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -206,7 +207,7 @@ padding-top: 20px;
     padding: 30px;
   }
 
-  .footer-home a {
+  .footer a {
     text-decoration: none;
     color: white;
     font-weight: bold;

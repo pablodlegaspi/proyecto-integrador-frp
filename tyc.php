@@ -9,11 +9,11 @@
   <body>
     <div class="container-tyc">
       <header>
-        <section class="header-home"id=home>
-          <a class="logo-home" href="home.html"><img src="docs/Logo10%.png" alt="logo-de-vecinos-colaborativos"></a>
+        <section class="header-home">
+          <a class="logo-home" href="_home.php"><img src="docs/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
           <div class="login-register">
-            <a href="login.html">Iniciar Sesión</a>
-            <a href="register.html">Registrate</a>
+            <a href="login.php">Iniciar Sesión</a>
+            <a href="register.php">Registrate</a>
           </div>
         </section>
       </header>
@@ -127,9 +127,9 @@
         <p>En caso de que el USUARIO tenga alguna duda derivada de la lectura de estos Términos y Condiciones, podrá ponerse en contacto a través del <a href="contacto@vivamosjuntos.com" target="_blank">correo electrónico.</a></p>
     </div>
     <footer class="footer">
-      <a href="home.html">Home</a>
-      <a href="_faq.html">Preguntas Frecuentes</a>
-      <a href="#home">Volver Arriba</a>
+      <a href="_home.php">Home</a>
+      <a href="faq.php">Preguntas Frecuentes</a>
+      <a href="#">Volver Arriba</a>
     </footer>
     </div>
       </body>

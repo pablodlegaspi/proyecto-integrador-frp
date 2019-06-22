@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vecinos Colaborativos</title>
+    <title>Mi Perfil</title>
   </head>
   <body>
     <div class="container">
       <section class="header-timeline">
         <div class="sub-header-timeline">
 
-        <a class="logo" href="timeline.html"><img src="docs/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
+        <a class="logo" href="timeline.php"><img src="docs/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
 
         <div class="buscador-area">
           <input class="buscador" type="text" name="buscador" value="" placeholder="Buscar...">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="menu-timeline">
-          <a href="contactos.html"><i class="fas fa-user-friends"></i></a>
+          <a href="contactos.php"><i class="fas fa-user-friends"></i></a>
           <div class="separador">
             <span>|</span>
           </div>
@@ -43,78 +43,109 @@
         </div>
 
         <div class="perfil-timeline">
-          <a href="profile.html"> <span>Nombre de Usuario</span> <img class="foto-en-timeline" src="docs/user-24px.png" alt="foto-de-perfil"></a>
+          <a href="profile.php"> <span>Nombre de Usuario</span> <img class="foto-en-timeline" src="docs/user-24px.png" alt="foto-de-perfil"></a>
         </div>
 
         </div>
 
+      </section>
+
+      <section class="perfil-container">
+        <div class="perfil-contenido">
+          <div class="foto-nombre-y-redes">
+            <div class="foto-en-perfil">
+              <a href="profile.php"><img src="docs/user-160x160.png" alt="foto-de-perfil"></a>
+            </div>
+            <div class="datos-en-perfil">
+              <a href="profile.php">Nombre de Usuario</a>
+              <ul>
+                <li class="fb"><a href="#"><i class="fab fa-facebook-f"></a></i></li>
+                <li class="tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="ig"><a href="#"><i class="fab fa-instagram"></a></i></li>
+                <li class="li"><a href="#"><i class="fab fa-linkedin-in"></a></i></li>
+              </ul>
+            </div>
+            <div class="descripcion-perfil">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </span>
+            </div>
+          </div>
+          <div class="menu-perfil">
+            <ul>
+              <li><a href="contactos.php">Contactos</a></li>
+              <li><a href="#">Grupos</a></li>
+              <li><a href="#">Proyectos</a></li>
+              <li><a href="#">Intereses</a></li>
+              <li><a href="#">Configuración</a></li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <div class="timeline-container">
 
-      <section class="timeline-left">
-        <div class="contenido-usuario">
-          <div class="tus-proyectos">
-            <h6>Tu proyectos:</h6>
-            <hr>
-            <div class="proyecto">
-              <div class="proyecto-izq">
-                <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
-              </div>
-              <div class="proyecto-der">
-                <a href="#">Nombre del proyecto</a>
-                <p>Creado el 4 de junio de 2018</p>
+        <section class="timeline-left">
+          <div class="contenido-usuario">
+            <div class="tus-proyectos">
+              <h6>Tu proyectos:</h6>
+              <hr>
+              <div class="proyecto">
+                <div class="proyecto-izq">
+                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                </div>
+                <div class="proyecto-der">
+                  <a href="#">Nombre del proyecto</a>
+                  <p>Creado el 4 de junio de 2018</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="contenido-usuario">
-          <div class="tus-grupos">
-            <h6>Tus grupos:</h6>
-            <hr>
-            <div class="proyecto">
-              <div class="proyecto-izq">
-                <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+          <div class="contenido-usuario">
+            <div class="tus-grupos">
+              <h6>Tus grupos:</h6>
+              <hr>
+              <div class="proyecto">
+                <div class="proyecto-izq">
+                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                </div>
+                <div class="proyecto-der">
+                  <a href="#">Nombre del grupo</a>
+                  <p>Creado el 4 de junio de 2018</p>
+                </div>
               </div>
-              <div class="proyecto-der">
-                <a href="#">Nombre del grupo</a>
+              <hr>
+              <div class="proyecto">
+                <div class="proyecto-izq">
+                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                </div>
+                <div class="proyecto-der">
+                  <a href="#">Nombre del grupo</a>
+                  <p>Creado el 4 de junio de 2018</p>
+                </div>
+              </div>
+              <hr>
+              <div class="proyecto">
+                <div class="proyecto-izq">
+                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                </div>
+                <div class="proyecto-der">
+                  <a href="#">Nombre del grupo</a>
                 <p>Creado el 4 de junio de 2018</p>
+                </div>
               </div>
-            </div>
-            <hr>
-            <div class="proyecto">
-              <div class="proyecto-izq">
-                <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
-              </div>
-              <div class="proyecto-der">
-                <a href="#">Nombre del grupo</a>
-                <p>Creado el 4 de junio de 2018</p>
-              </div>
-            </div>
-            <hr>
-            <div class="proyecto">
-              <div class="proyecto-izq">
-                <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
-              </div>
-              <div class="proyecto-der">
-                <a href="#">Nombre del grupo</a>
-              <p>Creado el 4 de junio de 2018</p>
-              </div>
-            </div>
-            <hr>
-            <div class="proyecto">
-              <div class="proyecto-izq">
-                <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
-              </div>
-              <div class="proyecto-der">
-                <a href="#">Nombre del grupo</a>
-                <p>Creado el 4 de junio de 2018</p>
+              <hr>
+              <div class="proyecto">
+                <div class="proyecto-izq">
+                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                </div>
+                <div class="proyecto-der">
+                  <a href="#">Nombre del grupo</a>
+                  <p>Creado el 4 de junio de 2018</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section class="timeline-center">
         <div class="publicacion">
@@ -294,9 +325,6 @@
             </div>
           </div>
         </div>
-
-
-
       </section>
 
       </div>

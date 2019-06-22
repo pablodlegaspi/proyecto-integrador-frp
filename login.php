@@ -10,10 +10,10 @@
 
     <div class="container">
       <section class="header-home">
-        <a class="logo-home" href="home.html"><img src="docs/Logo10%.png" alt="logo-de-vecinos-colaborativos"></a>
+        <a class="logo-home" href="_home.php"><img src="docs/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
         <div class="login-register">
-          <a href="login.html">Iniciar Sesión</a>
-          <a href="register.html">Registrate</a>
+          <a href="login.php">Iniciar Sesión</a>
+          <a href="register.php">Registrate</a>
         </div>
       </section>
       <div class="login-box-container">
@@ -33,9 +33,9 @@
           </form>
         </div>
       </div>
-      <section class="footer-home">
-          <a href="_faq.html">Preguntas Frecuentes</a>
-          <a href="tyc.html">Términos y Condiciones</a>
+      <section class="footer">
+          <a href="faq.php">Preguntas Frecuentes</a>
+          <a href="tyc.php">Términos y Condiciones</a>
       </section>
     </div>
 

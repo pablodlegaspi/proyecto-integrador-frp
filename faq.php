@@ -9,11 +9,11 @@
   <body>
     <div class="container-faq">
       <header>
-        <section class="header-home" id=home>
-          <a class="logo-home" href="home.html"><img src="docs/Logo10%.png" alt="logo-de-vecinos-colaborativos"></a>
+        <section class="header-home">
+          <a class="logo-home" href="_home.php"><img src="docs/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
           <div class="login-register">
-            <a href="login.html">Iniciar Sesión</a>
-            <a href="register.html">Registrate</a>
+            <a href="login.php">Iniciar Sesión</a>
+            <a href="register.php">Registrate</a>
           </div>
         </section>
       </header>
@@ -45,9 +45,9 @@
       <p>Para darte de baja simplemente tendrás que ir hasta tu Perfil, seleccionar la opción “Configuración” y darle click a la opción “Cancelar Cuenta”. Haciendo esto perderás toda la información que compartiste en la plataforma.</p>
     </div>
   <footer class="footer">
-    <a href="home.html">Home</a>
-    <a href="tyc.html">Términos y Condiciones</a>
-    <a href="#home">Volver Arriba</a>
+    <a href="_home.php">Home</a>
+    <a href="tyc.php">Términos y Condiciones</a>
+    <a href="#">Volver Arriba</a>
   </footer>
     </div>
   </body>
