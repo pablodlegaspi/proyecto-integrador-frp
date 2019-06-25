@@ -8,7 +8,7 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   text-align: justify;
@@ -45,37 +45,94 @@
   width: 70%;
 }
 
+.form-element {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .form {
+  margin-top: 5px;
   width: 100%;
   border:none;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 4px;
   outline: none;
+  padding: 5px;
   font-size: 18px;
+  color: rgb(66, 66, 66);
+}
+
+.country-label {
+  margin-bottom: 15px;
+}
+
+.countries {
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgba(149, 112, 179, 0.63);
+}
+
+.register-alert {
+  margin-top: 5px;
+  width: 100%;
+  border:none;
+  border-radius: 4px;
+  outline: none;
+  padding: 5px;
+  font-size: 18px;
+  color: rgb(106, 36, 36);
+  background-color: rgb(238, 184, 184);
+}
+
+.profile-pic-label {
+  border-radius: 4px;
+  padding: 5px;
+  background-color: rgba(149, 112, 179, 0.63);
+  color: rgb(79, 56, 83);
+  cursor: pointer;
+}
+
+.profile-pic-label:hover {
+  transition: background-color, color .3s ease-in;
+  background-color: rgb(107, 55, 148);
+  color: white;
+}
+
+#profile-pic {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 .boton{
+  margin-top: 20px;
   width: 50%;
   padding: 10px;
   border: none;
   background: rgb(107, 55, 148);
   color: white;
-  justify-content: center;
   font-size: 18px;
   border-radius: 20px;
-  display: flex;
-  margin: auto;
   cursor: pointer;
+  align-self: center;
 }
 
 .p-condiciones{
   width: 60%;
+  font-size: 16px;
 }
 .register-condiciones {
 display: inline;
 text-decoration: none;
-color: black;
+color: rgb(107, 55, 148);
 font-style: italic;
+font-size: 16px;
 }
 
 @media (max-width: 1024px) {
@@ -87,6 +144,16 @@ font-style: italic;
   .boton{
     width: 60%;
   }
+}
+
+@media (max-width: 670px) {
+
+  .profile-pic-label-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
 }
 
 @media (max-width: 576px) {
