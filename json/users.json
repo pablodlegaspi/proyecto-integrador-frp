@@ -1,0 +1,26 @@
+[
+    {
+        "fullName": "Pablo Diaz Legaspi",
+        "userName": "pablodl",
+        "email": "pablodlegaspi@gmail.com",
+        "password": "$2y$10$c2CTQRYpR3SlpoGQXbq\/9uxysQZJP5IhU9xv6u3nuWfpIu9vxhyve",
+        "country": "ar",
+        "profilePicRoute": "archive\/pablodl-5d1520ed121a8.jpeg"
+    },
+    {
+        "fullName": "mauro alvarez",
+        "userName": "mauritocabj1996",
+        "email": "mauro.cabj@gmail.com",
+        "password": "$2y$10$dqpqCnQB8LqFDm2P2sl7.u7VQGYn3Bslor2Fj6YIJbTQkhDGQFPry",
+        "country": "ar",
+        "profilePicRoute": "archive\/mauritocabj1996-5d15217425916.png"
+    },
+    {
+        "fullName": "Pedro Gomez",
+        "userName": "pedrito",
+        "email": "pedroCARP@gmail.com",
+        "password": "$2y$10$o8DU3gW9cesHdGCp6sMyb.nR4Q1ZTe6CBiQhnAfruogdYq5Axyl\/i",
+        "country": "ar",
+        "profilePicRoute": "archive\/pedrito-5d1522db4eb76.jpg"
+    }
+]

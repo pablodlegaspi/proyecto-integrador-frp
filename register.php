@@ -23,6 +23,18 @@
 
     $errorsInRegister = validateRegister ();
 
+    if (!$errorsInRegister) {
+
+      $profilePicSaved = saveImage($_FILES["profilePic"]);
+
+      $_POST["profilePicRoute"] = $profilePicSaved;
+
+      saveUser();
+
+      header("location: login.php");
+      exit;
+    }
+
   }
 
 ?>
@@ -58,7 +70,12 @@
       <div class="formulario">
         <form action="" method="post" enctype="multipart/form-data">
           <div class="form-element">
-            <label for="fullName"><b>Nombre Completo:</b></label>
+            <label for="fullName"
+              <?php if (isset($errorsInRegister["inFullName"])) : ?>
+                style="color:red;">
+              <?php endif; ?>
+              <b>Nombre Completo:</b>
+            </label>
             <input class="form" type="text" name="fullName" id="fullName" value="<?= isset($fullNameInPost) ? $fullNameInPost : ""; ?>">
           </div>
           <?php if ( isset($errorsInRegister["inFullName"]) ) : ?>
@@ -70,7 +87,12 @@
             <span>ALERTA!</span>
           </div> -->
           <div class="form-element">
-            <label for="userName"><b>Nombre de Usuario:</b></label>
+            <label for="userName"
+              <?php if (isset($errorsInRegister["inUserName"])) : ?>
+                style="color:red;">
+              <?php endif; ?>
+              <b>Nombre de Usuario:</b>
+            </label>
             <input class="form" type="text" name="userName" id="userName" value="<?= isset($userNameInPost) ? $userNameInPost : ""; ?>">
           </div>
           <?php if ( isset($errorsInRegister["inUserName"]) ) : ?>
@@ -79,7 +101,12 @@
             </div>
           <?php endif; ?>
           <div class="form-element">
-            <label for="email"> <b>Correo Electrónico:</b> </label>
+            <label for="email"
+              <?php if (isset($errorsInRegister["inEmail"])) : ?>
+                style="color:red;">
+              <?php endif; ?>
+              <b>Correo Electrónico:</b>
+            </label>
             <input class="form" type="email" name="email" id="email" value="<?= isset($emailInPost) ? $emailInPost : ""; ?>">
           </div>
           <?php if ( isset($errorsInRegister["inEmail"]) ) : ?>
@@ -88,7 +115,12 @@
             </div>
           <?php endif; ?>
           <div class="form-element">
-            <label for="password"> <b>Contraseña:</b> </label>
+            <label for="password"
+              <?php if (isset($errorsInRegister["inPassword"])) : ?>
+              style="color:red;">
+              <?php endif; ?>
+              <b>Contraseña:</b>
+            </label>
             <input class="form" type="password" name="password" id="password">
           </div>
           <?php if ( isset($errorsInRegister["inPassword"]) ) : ?>
@@ -97,7 +129,12 @@
             </div>
           <?php endif; ?>
           <div class="form-element">
-            <label for="rePassword"> <b>Repetir contraseña:</b> </label>
+            <label for="rePassword"
+            <?php if (isset($errorsInRegister["inRePassword"])) : ?>
+            style="color:red;">
+            <?php endif; ?>
+              <b>Repetir contraseña:</b>
+            </label>
             <input class="form" type="password" name="rePassword" id="rePassword">
           </div>
           <?php if ( isset($errorsInRegister["inRePassword"]) ) : ?>
@@ -106,7 +143,10 @@
             </div>
           <?php endif; ?>
           <div class="form-element">
-            <label class="country-label" for="country">
+            <label class="country-label" for="country"
+              <?php if (isset($errorsInRegister["inCountry"])) : ?>
+                style="color:red;">
+              <?php endif; ?>
               <b>País de Nacimiento:</b>
               <select class="countries" name="country">
                 <option value="">Elegí un país</option>
@@ -118,17 +158,25 @@
             </label>
           </div>
           <div class="form-element">
-            <label class="profile-pic-label-container" for="">
+            <label class="profile-pic-label-container" for="profilePic"
+            <?php if (isset($errorsInRegister["inProfilePic"])) : ?>
+              style="color:red;">
+            <?php endif; ?>
               <b>Imagen de perfil:</b>
               <label class="profile-pic-label" for="profilePic">
                 <i class="fas fa-file-upload"></i>
                 Mi Archivo
               </label>
-              <input class"form" type="file" name="profilePic" id="profilPic" value="">
+              <input class"form" type="file" name="profilePic" id="profilePic" value="">
             </label>
           </div>
+          <?php if ( isset($errorsInRegister["inProfilePic"]) ) : ?>
+            <div class="register-alert">
+              <?= $errorsInRegister["inProfilePic"] ?>
+            </div>
+          <?php endif; ?>
           <div class="form-element">
-            <input class="boton" type="submit" name="register" value="Registrarme">
+            <input class="boton" type="submit" value="Registrarme">
           </div>
         </form>
       </div>

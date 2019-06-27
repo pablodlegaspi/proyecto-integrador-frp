@@ -8,7 +8,7 @@ function validateRegister() {
   $password = $_POST["password"];
   $rePassword = $_POST["rePassword"];
   $country = $_POST["country"];
-  $profillePic = $_FILES["profilePic"];
+  $profilePic = $_FILES["profilePic"];
   $errors = [];
 
   if ( empty($fullName) ) {
@@ -25,12 +25,16 @@ function validateRegister() {
   } //uso la misma regex que en el nombre completo pero agrego los números del 0 al 9, justo despues de A-Z y elimino el espacio al final de la lista de los caracteres raros, justo antes de la ",".
   elseif (!preg_match("/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð,.'-]+$/", $userName)) {
     $errors["inUserName"] = "El nombre de usuario no puede contener espacios.";
+  } elseif (userNameExist($userName) == true) {
+    $errors["inUserName"] = "Ya existe un usuario con ese nombre.";
   }
 
   if ( empty($email) ) {
     $errors["inEmail"] = "Por favor completá con tu correo electrónico.";
   } elseif ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
     $errors["inEmail"] = "Completar con el formato apropiado";
+  } elseif (emailExist($email) == true) {
+    $errors["inEmail"] = "Ya existe un usuario con ese correo electrónico.";
   }
 
   if ( empty($password) ) {
@@ -46,16 +50,77 @@ function validateRegister() {
   if ( empty($rePassword) ) {
     $errors["inRePassword"] = "Por favor repetí tu contraseña.";
   } elseif ($rePassword != $password) {
-    $errors["inRePassword"] = "Las contraseñas no coinciden";
+    $errors["inRePassword"] = "Las contraseñas no coinciden.";
   }
 
-  
+  if ($profilePic["error"] != UPLOAD_ERR_OK) {
+    $errors["inProfilePic"] = "Por favor elegí una imágen de perfil.";
+  } else {
+    $ext = pathinfo($profilePic["name"], PATHINFO_EXTENSION);
+
+    if ($ext != "jpg" && $ext != "jpeg" && $ext != "png") {
+      $errors["inProfilePic"] = "Por favor subí una imágen de tipo 'jpg', 'jpeg' o 'png'.";
+    }
+  }
 
   return $errors;
 
 }
 
+function getAllUsers() {
 
+  $usersArray = json_decode( file_get_contents("json/users.json"), true );
 
+  return $usersArray;
+}
+
+function emailExist($email) {
+
+  $users = getAllUsers();
+
+  foreach ($users as $oneUser) {
+    if ( $oneUser["email"] == $email ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function userNameExist($userName) {
+
+  $users = getAllUsers();
+
+  foreach ($users as $oneUser) {
+    if ( $oneUser["userName"] == $userName ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function saveUser() {
+
+  $usersList = getAllUsers();
+
+  unset($_POST["rePassword"]);
+
+  $_POST["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+  $usersList[] = $_POST;
+
+  return file_put_contents( "json/users.json", json_encode($usersList, JSON_PRETTY_PRINT) );
+}
+
+function saveImage($file) {
+
+  $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
+
+  $destino = "archive/" . $_POST["userName"] . uniqid("-") . "." . $ext;
+
+  move_uploaded_file($file["tmp_name"], $destino);
+
+  return $destino;
+
+}
 
 ?>
