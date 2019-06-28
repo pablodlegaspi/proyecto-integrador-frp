@@ -10,7 +10,7 @@
 
     <div class="container">
       <section class="header-home">
-        <a class="logo-home" href="_home.php"><img src="docs/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
+        <a class="logo-home" href="_home.php"><img src="deposito-de-archivos/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
         <div class="login-register">
           <a href="login.php">Iniciar Sesión</a>
           <a href="register.php">Registrate</a>
@@ -18,7 +18,7 @@
       </section>
       <div class="login-box-container">
         <div class="login-box">
-          <img class="login-logo"src="docs/Logo.png"alt="logo-de-vecinos-colaborativos">
+          <img class="login-logo"src="deposito-de-archivos/Logo.png"alt="logo-de-vecinos-colaborativos">
           <h2 class="login-vecino">Vecinos Colaborativos</h2>
           <h3>Inicia Sesión</h3>
           <form class="forms" action="" method="">

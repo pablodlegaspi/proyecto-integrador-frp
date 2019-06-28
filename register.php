@@ -52,7 +52,7 @@
   <div class="container">
 
     <section class="header-home">
-      <a class="logo-home" href="_home.php"><img src="docs/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
+      <a class="logo-home" href="_home.php"><img src="deposito-de-archivos/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
       <div class="login-register">
         <a href="login.php">Iniciar Sesión</a>
         <a href="register.php">Registrate</a>
@@ -62,7 +62,7 @@
     <div class="register-box">
       <section class="seccion-a">
         <div class="logo-container">
-          <img class="register-logo"src="docs/Logo.png"alt="logo-de-vecinos-colaborativos">
+          <img class="register-logo"src="deposito-de-archivos/Logo.png"alt="logo-de-vecinos-colaborativos">
         </div>
         <h1 class="register-vecino">Vecinos Colaborativos</h1>
       </section>

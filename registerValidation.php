@@ -9,6 +9,7 @@ function validateRegister() {
   $rePassword = $_POST["rePassword"];
   $country = $_POST["country"];
   $profilePic = $_FILES["profilePic"];
+  
   $errors = [];
 
   if ( empty($fullName) ) {

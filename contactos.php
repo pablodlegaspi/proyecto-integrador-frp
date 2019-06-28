@@ -11,7 +11,7 @@
       <section class="header-timeline">
         <div class="sub-header-timeline">
 
-        <a class="logo" href="timeline.php"><img src="docs/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
+        <a class="logo" href="timeline.php"><img src="deposito-de-archivos/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
 
         <div class="buscador-area">
           <input class="buscador" type="text" name="buscador" value="" placeholder="Buscar...">
@@ -43,7 +43,7 @@
         </div>
 
         <div class="perfil-timeline">
-          <a href="profile.php"> <span>Nombre de Usuario</span> <img class="foto-en-timeline" src="docs/user-24px.png" alt="foto-de-perfil"></a>
+          <a href="profile.php"> <span>Nombre de Usuario</span> <img class="foto-en-timeline" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"></a>
         </div>
 
         </div>
@@ -54,7 +54,7 @@
         <div class="perfil-contenido">
           <div class="foto-nombre-y-redes">
             <div class="foto-en-perfil">
-              <a href="profile.php"><img src="docs/user-160x160.png" alt="foto-de-perfil"></a>
+              <a href="profile.php"><img src="deposito-de-archivos/user-160x160.png" alt="foto-de-perfil"></a>
             </div>
             <div class="datos-en-perfil">
               <a href="profile.php">Nombre de Usuario</a>
@@ -90,7 +90,7 @@
               <hr>
               <div class="proyecto">
                 <div class="proyecto-izq">
-                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                  <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
                 </div>
                 <div class="proyecto-der">
                   <a href="#">Nombre del proyecto</a>
@@ -106,7 +106,7 @@
               <hr>
               <div class="proyecto">
                 <div class="proyecto-izq">
-                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                  <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
                 </div>
                 <div class="proyecto-der">
                   <a href="#">Nombre del grupo</a>
@@ -116,7 +116,7 @@
               <hr>
               <div class="proyecto">
                 <div class="proyecto-izq">
-                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                  <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
                 </div>
                 <div class="proyecto-der">
                   <a href="#">Nombre del grupo</a>
@@ -126,7 +126,7 @@
               <hr>
               <div class="proyecto">
                 <div class="proyecto-izq">
-                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                  <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
                 </div>
                 <div class="proyecto-der">
                   <a href="#">Nombre del grupo</a>
@@ -136,7 +136,7 @@
               <hr>
               <div class="proyecto">
                 <div class="proyecto-izq">
-                  <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+                  <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
                 </div>
                 <div class="proyecto-der">
                   <a href="#">Nombre del grupo</a>
@@ -150,7 +150,7 @@
       <section class="timeline-center">
           <div class="contacto">
             <div class="contacto-izq">
-              <a href="#"><img src="docs/user-120x120.png" alt="foto-de-contacto"></a>
+              <a href="#"><img src="deposito-de-archivos/user-120x120.png" alt="foto-de-contacto"></a>
             </div>
             <div class="contacto-der">
               <div class="nombre-contacto">
@@ -167,7 +167,7 @@
 
           <div class="contacto">
             <div class="contacto-izq">
-              <a href="#"><img src="docs/user-120x120.png" alt="foto-de-contacto"></a>
+              <a href="#"><img src="deposito-de-archivos/user-120x120.png" alt="foto-de-contacto"></a>
             </div>
             <div class="contacto-der">
               <div class="nombre-contacto">
@@ -184,7 +184,7 @@
 
           <div class="contacto">
             <div class="contacto-izq">
-              <a href="#"><img src="docs/user-120x120.png" alt="foto-de-contacto"></a>
+              <a href="#"><img src="deposito-de-archivos/user-120x120.png" alt="foto-de-contacto"></a>
             </div>
             <div class="contacto-der">
               <div class="nombre-contacto">
@@ -201,7 +201,7 @@
 
           <div class="contacto">
             <div class="contacto-izq">
-              <a href="#"><img src="docs/user-120x120.png" alt="foto-de-contacto"></a>
+              <a href="#"><img src="deposito-de-archivos/user-120x120.png" alt="foto-de-contacto"></a>
             </div>
             <div class="contacto-der">
               <div class="nombre-contacto">
@@ -218,7 +218,7 @@
 
           <div class="contacto">
             <div class="contacto-izq">
-              <a href="#"><img src="docs/user-120x120.png" alt="foto-de-contacto"></a>
+              <a href="#"><img src="deposito-de-archivos/user-120x120.png" alt="foto-de-contacto"></a>
             </div>
             <div class="contacto-der">
               <div class="nombre-contacto">
@@ -235,7 +235,7 @@
 
           <div class="contacto">
             <div class="contacto-izq">
-              <a href="#"><img src="docs/user-120x120.png" alt="foto-de-contacto"></a>
+              <a href="#"><img src="deposito-de-archivos/user-120x120.png" alt="foto-de-contacto"></a>
             </div>
             <div class="contacto-der">
               <div class="nombre-contacto">
@@ -270,7 +270,7 @@
           <hr>
           <div class="proyecto">
             <div class="proyecto-izq">
-              <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+              <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
             </div>
             <div class="proyecto-der">
               <a href="#">Nombre del proyecto</a>
@@ -280,7 +280,7 @@
           <hr>
           <div class="proyecto">
             <div class="proyecto-izq">
-              <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+              <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
             </div>
             <div class="proyecto-der">
               <a href="#">Nombre del proyecto</a>
@@ -294,7 +294,7 @@
           <hr>
           <div class="proyecto">
             <div class="proyecto-izq">
-              <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+              <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
             </div>
             <div class="proyecto-der">
               <a href="#">Nombre del grupo</a>
@@ -304,7 +304,7 @@
           <hr>
           <div class="proyecto">
             <div class="proyecto-izq">
-              <a href="#"> <img src="docs/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
+              <a href="#"> <img src="deposito-de-archivos/img-02-80x80.jpg" alt="foto-cohousing-exterior"> </a>
             </div>
             <div class="proyecto-der">
               <a href="#">Nombre del grupo</a>
@@ -318,7 +318,7 @@
           <hr>
           <div class="sugerencia-contacto">
             <div class="foto-contacto-sugerido">
-              <a href="#"> <img src="docs/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
+              <a href="#"> <img src="deposito-de-archivos/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
             </div>
             <div class="nombre-contacto-sugerido">
               <a href="#">Nombre del contacto</a>
@@ -327,7 +327,7 @@
           <hr>
           <div class="sugerencia-contacto">
             <div class="foto-contacto-sugerido">
-              <a href="#"> <img src="docs/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
+              <a href="#"> <img src="deposito-de-archivos/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
             </div>
             <div class="nombre-contacto-sugerido">
               <a href="#">Nombre del contacto</a>
@@ -336,7 +336,7 @@
           <hr>
           <div class="sugerencia-contacto">
             <div class="foto-contacto-sugerido">
-              <a href="#"> <img src="docs/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
+              <a href="#"> <img src="deposito-de-archivos/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
             </div>
             <div class="nombre-contacto-sugerido">
               <a href="#">Nombre del contacto</a>
@@ -345,7 +345,7 @@
           <hr>
           <div class="sugerencia-contacto">
             <div class="foto-contacto-sugerido">
-              <a href="#"> <img src="docs/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
+              <a href="#"> <img src="deposito-de-archivos/user-50x50.png" alt="foto-de-contacto-sugerido"> </a>
             </div>
             <div class="nombre-contacto-sugerido">
               <a href="#">Nombre del contacto</a>
