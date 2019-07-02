@@ -123,6 +123,10 @@
   display: none;
 }
 
+.logout a {
+  color: white;
+}
+
 .timeline-container {
   width: 100%;
   display: flex;

@@ -1,6 +1,6 @@
 <?php
 
-  require_once "registerValidation.php";
+  require_once "register-login-validation.php";
 
   $countries = [
     'ar' => 'Argentina',
@@ -45,7 +45,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>Register</title>
   </head>
   <body>
 
@@ -83,9 +83,6 @@
               <?= $errorsInRegister["inFullName"] ?>
             </div>
           <?php endif; ?>
-          <!-- <div class="register-alert">
-            <span>ALERTA!</span>
-          </div> -->
           <div class="form-element">
             <label for="userName"
               <?php if (isset($errorsInRegister["inUserName"])) : ?>

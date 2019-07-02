@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if ( isset($_COOKIE['userNameOrEmail']) ) {
+  $loggedUser = getUserByUserNameOrEmail($_COOKIE['userNameOrEmail']);
+  $_SESSION['loggedUser'] = $loggedUser;
+}
+
 function validateRegister() {
 
   $fullName = trim( ucwords($_POST["fullName"]) );
@@ -9,7 +16,7 @@ function validateRegister() {
   $rePassword = $_POST["rePassword"];
   $country = $_POST["country"];
   $profilePic = $_FILES["profilePic"];
-  
+
   $errors = [];
 
   if ( empty($fullName) ) {
@@ -29,6 +36,7 @@ function validateRegister() {
   } elseif (userNameExist($userName) == true) {
     $errors["inUserName"] = "Ya existe un usuario con ese nombre.";
   }
+
 
   if ( empty($email) ) {
     $errors["inEmail"] = "Por favor completá con tu correo electrónico.";
@@ -68,11 +76,75 @@ function validateRegister() {
 
 }
 
+function validateLogin() {
+
+  $userName_email = trim($_POST["userNameOrEmail"]);
+  $password = trim($_POST["password"]);
+
+  $errors = [];
+
+  if (empty($userName_email)) {
+      $errors["inUserNameOrEmail"] = "Por favor completá con tu nombre de usuario o correo electrónico";
+    } elseif ( !userNameOremailExist($userName_email) ) {
+      $errors["inUserNameOrEmail"] = "No existe un usuario registrado con ese nombre de usuario o correo electrónico.";
+    }
+
+  if ( empty($password) ) {
+    $errors["inPassword"] = "Por favor completá con tu contraseña.";
+  } else {
+
+    $userToLogin = getUserByUserNameOrEmail($userName_email);
+
+    if ( !password_verify($password, $userToLogin["password"]) ) {
+      $errors["inPassword"] = "Las credenciales no coinciden.";
+    }
+  }
+
+  return $errors;
+
+}
+
+function login($userToLogin) {
+
+  unset($userToLogin["password"]);
+
+  $_SESSION['loggedUser'] = $userToLogin;
+
+}
+
+function alreadyLoggedIn() {
+  return isset($_SESSION['loggedUser']);
+}
+
+function userNameOremailExist($userNameOrEmail) {
+
+  $users = getAllUsers();
+
+  foreach ($users as $oneUser) {
+    if ( $oneUser["email"] == $userNameOrEmail || $oneUser["userName"] == $userNameOrEmail ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function getAllUsers() {
 
   $usersArray = json_decode( file_get_contents("json/users.json"), true );
 
   return $usersArray;
+}
+
+function getUserByUserNameOrEmail($userNameOrEmail) {
+
+  $users = getAllUsers();
+
+  foreach ($users as $oneUser) {
+    if ($oneUser["userName"] == $userNameOrEmail || $oneUser["email"] == $userNameOrEmail) {
+      return $oneUser;
+    }
+  }
+  return false;
 }
 
 function emailExist($email) {

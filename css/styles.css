@@ -2,12 +2,12 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans&display=swap";
 
 @import "_home.css";
-@import "_profile.css";
-@import "_timeline.css";
 @import "_faq.css";
 @import "_tyc.css";
-@import "_login.css";
 @import "_register.css";
+@import "_login.css";
+@import "_timeline.css";
+@import "_profile.css";
 @import "_contactos.css";
 
 

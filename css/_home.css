@@ -201,7 +201,7 @@ padding-top: 20px;
 
   .footer {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
     padding: 30px;

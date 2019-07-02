@@ -8,19 +8,19 @@
         "profilePicRoute": "archive\/pablodl-5d1520ed121a8.jpeg"
     },
     {
-        "fullName": "mauro alvarez",
-        "userName": "mauritocabj1996",
-        "email": "mauro.cabj@gmail.com",
-        "password": "$2y$10$dqpqCnQB8LqFDm2P2sl7.u7VQGYn3Bslor2Fj6YIJbTQkhDGQFPry",
-        "country": "ar",
-        "profilePicRoute": "archive\/mauritocabj1996-5d15217425916.png"
-    },
-    {
         "fullName": "Pedro Gomez",
         "userName": "pedrito",
         "email": "pedroCARP@gmail.com",
         "password": "$2y$10$o8DU3gW9cesHdGCp6sMyb.nR4Q1ZTe6CBiQhnAfruogdYq5Axyl\/i",
         "country": "ar",
         "profilePicRoute": "archive\/pedrito-5d1522db4eb76.jpg"
+    },
+    {
+        "fullName": "Mauro Alvarez",
+        "userName": "mauritocabj1996",
+        "email": "mauro.cabj@gmail.com",
+        "password": "$2y$10$l9f9W87VyPncHpxFFlke.u.EfJe8BpAaiNt5RWt2jLq0jmjnS.xoG",
+        "country": "ar",
+        "profilePicRoute": "archive\/mauritocabj1996-5d1bb0d7477c7.png"
     }
 ]

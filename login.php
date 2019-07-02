@@ -1,3 +1,32 @@
+<?php
+
+  require_once "register-login-validation.php";
+
+  if ($_POST) {
+
+  $userNameOrEmail = $_POST["userNameOrEmail"];
+
+    $errorsInRegister = validateLogin ();
+
+    if (!$errorsInRegister) {
+
+      $userToLogin = getUserByUserNameOrEmail($userNameOrEmail);
+
+      login($userToLogin);
+
+      if ( isset($_POST["rememberUser"]) ) {
+        setcookie('userNameOrEmail', $_POST['userNameOrEmail'], time() + 30);
+      }
+
+      header('location: profile.php');
+      exit;
+    }
+
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,23 +45,62 @@
           <a href="register.php">Registrate</a>
         </div>
       </section>
-      <div class="login-box-container">
-        <div class="login-box">
-          <img class="login-logo"src="deposito-de-archivos/Logo.png"alt="logo-de-vecinos-colaborativos">
-          <h2 class="login-vecino">Vecinos Colaborativos</h2>
-          <h3>Inicia Sesión</h3>
-          <form class="forms" action="" method="">
-          <label for="username">Usuario</label>
-          <input class="text" type="text" placeholder="Ingresá tu correo o usuario"><br><br>
-          <label for="Password">Contraseña</label>
-          <input class="text" type="Password" placeholder="Ingresá tu contraseña"><br><br>
-          <input class="boton" type="submit" name="" value="Iniciar Sesión"><br>
-           <a class="login-condiciones" href="#">¿Olvidaste tu contraseña?</a><br>
-           <a class="login-condiciones"  href="#">¿No tenés una cuenta?</a>
-           <a class="registro" href="register.html">Registrate Ahora >></a><br><br>
+
+      <div class="register-box">
+        <section class="seccion-a">
+          <div class="logo-container">
+            <img class="register-logo"src="deposito-de-archivos/Logo.png"alt="logo-de-vecinos-colaborativos">
+          </div>
+          <h1 class="register-vecino">Vecinos Colaborativos</h1>
+        </section>
+        <h3 class="login-title">Iniciar Sesión</h3>
+        <div class="formulario">
+          <form action="" method="post">
+            <div class="form-element">
+              <label for="userNameOrEmail"
+                <?php if (isset($errorsInRegister["inUserNameOrEmail"])) : ?>
+                  style="color:red;">
+                <?php endif; ?>
+                <b>Nombre de Usuario / Correo Electrónico:</b>
+              </label>
+              <input class="form" type="text" type="email" name="userNameOrEmail" id="userNameOrEmail" value="<?= isset($userNameOrEmail) ? $userNameOrEmail : ""; ?>">
+            </div>
+            <?php if ( isset($errorsInRegister["inUserNameOrEmail"]) ) : ?>
+              <div class="register-alert">
+                <?= $errorsInRegister["inUserNameOrEmail"] ?>
+              </div>
+            <?php endif; ?>
+            <div class="form-element">
+              <label for="password"
+                <?php if (isset($errorsInRegister["inPassword"])) : ?>
+                  style="color:red;">
+                <?php endif; ?>
+                <b>Contraseña:</b>
+              </label>
+              <input class="form" type="password" name="password" id="password">
+            </div>
+            <?php if ( isset($errorsInRegister["inPassword"]) ) : ?>
+              <div class="register-alert">
+                <?= $errorsInRegister["inPassword"] ?>
+              </div>
+            <?php endif; ?>
+            <div class="form-element">
+              <label for="rememberUser">
+                <input type="checkbox" name="rememberUser" class="rememberUser" id="rememberUser" value="">
+                Recordarme
+              </label>
+            </div>
+            <div class="form-element">
+              <input class="boton" type="submit" value="Ingresar">
+            </div>
           </form>
         </div>
+        <p class="p-condiciones">Al registrarte, aceptas nuestras <a class="register-condiciones" href="tyc.html">Condiciones</a>, la <a class="register-condiciones" href="tyc.html">Política de datos </a> y
+        la <a class="register-condiciones" href="tyc.html"> Política de cookies</a>.</p>
       </div>
+
+      </div>
+
       <section class="footer">
           <a href="faq.php">Preguntas Frecuentes</a>
           <a href="tyc.php">Términos y Condiciones</a>

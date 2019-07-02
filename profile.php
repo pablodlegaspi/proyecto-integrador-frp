@@ -1,3 +1,17 @@
+<?php
+require_once 'register-login-validation.php';
+
+if (!alreadyLoggedIn()) {
+  header("location: login.php");
+}
+
+$loggedUser = $_SESSION['loggedUser'];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -43,7 +57,7 @@
         </div>
 
         <div class="perfil-timeline">
-          <a href="profile.php"> <span>Nombre de Usuario</span> <img class="foto-en-timeline" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"></a>
+          <a href="profile.php"> <span><?= $loggedUser['fullName'] ?></span> <img class="foto-en-timeline" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"></a>
         </div>
 
         </div>
@@ -54,10 +68,10 @@
         <div class="perfil-contenido">
           <div class="foto-nombre-y-redes">
             <div class="foto-en-perfil">
-              <a href="profile.php"><img src="deposito-de-archivos/user-160x160.png" alt="foto-de-perfil"></a>
+              <a href="profile.php"><img src="<?= $loggedUser['profilePicRoute'] ?>" alt="foto-de-perfil"></a>
             </div>
             <div class="datos-en-perfil">
-              <a href="profile.php">Nombre de Usuario</a>
+              <a href="profile.php"><?= $loggedUser['fullName'] ?></a>
               <ul>
                 <li class="fb"><a href="#"><i class="fab fa-facebook-f"></a></i></li>
                 <li class="tw"><a href="#"><i class="fab fa-twitter"></i></a></li>

@@ -1,3 +1,16 @@
+<?php
+require_once 'register-login-validation.php';
+
+if (!alreadyLoggedIn()) {
+  header("location: login.php");
+}
+
+$loggedUser = $_SESSION['loggedUser'];
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -11,40 +24,40 @@
       <section class="header-timeline">
         <div class="sub-header-timeline">
 
-        <a class="logo" href="timeline.php"><img src="deposito-de-archivos/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
+          <a class="logo" href="timeline.php"><img src="deposito-de-archivos/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
 
-        <div class="buscador-area">
-          <input class="buscador" type="text" name="buscador" value="" placeholder="Buscar...">
-          <a href="#"><i class="fas fa-search"></i></a>
-        </div>
-
-        <div class="buscador-lupa">
-          <a href="#"><i class="fas fa-search"></i></a>
-        </div>
-
-        <div class="menu-timeline">
-          <a href="contactos.php"><i class="fas fa-user-friends"></i></a>
-          <div class="separador">
-            <span>|</span>
+          <div class="buscador-area">
+            <input class="buscador" type="text" name="buscador" value="" placeholder="Buscar...">
+            <a href="#"><i class="fas fa-search"></i></a>
           </div>
-          <a href="#"><i class="fas fa-user-plus"></i></a>
-          <div class="separador">
-            <span>|</span>
-          </div>
-          <a href="#"><i class="fas fa-plus"></i></a>
-          <div class="separador">
-            <span>|</span>
-          </div>
-          <a href="#"><i class="fas fa-exclamation"></i></a>
-        </div>
 
-        <div class="menu-hamburguesa">
-          <a href="#"><i class="fas fa-bars"></i></a>
-        </div>
+          <div class="buscador-lupa">
+            <a href="#"><i class="fas fa-search"></i></a>
+          </div>
 
-        <div class="perfil-timeline">
-          <a href="profile.php"> <span>Nombre de Usuario</span> <img class="foto-en-timeline" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"></a>
-        </div>
+          <div class="menu-timeline">
+            <a href="contactos.php"><i class="fas fa-user-friends"></i></a>
+            <div class="separador">
+              <span>|</span>
+            </div>
+            <a href="#"><i class="fas fa-user-plus"></i></a>
+            <div class="separador">
+              <span>|</span>
+            </div>
+            <a href="#"><i class="fas fa-plus"></i></a>
+            <div class="separador">
+              <span>|</span>
+            </div>
+            <a href="#"><i class="fas fa-exclamation"></i></a>
+          </div>
+
+          <div class="menu-hamburguesa">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </div>
+
+          <div class="perfil-timeline">
+            <a href="profile.php"> <span><?= $loggedUser['fullName'] ?></span> <img class="foto-en-timeline" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"></a>
+          </div>
 
         </div>
 
@@ -54,10 +67,10 @@
         <div class="perfil-contenido">
           <div class="foto-nombre-y-redes">
             <div class="foto-en-perfil">
-              <a href="profile.php"><img src="deposito-de-archivos/user-160x160.png" alt="foto-de-perfil"></a>
+              <a href="profile.php"><img src="<?= $loggedUser['profilePicRoute'] ?>" alt="foto-de-perfil"></a>
             </div>
             <div class="datos-en-perfil">
-              <a href="profile.php">Nombre de Usuario</a>
+              <a href="profile.php"><?= $loggedUser['fullName'] ?></a>
               <ul>
                 <li class="fb"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li class="tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
