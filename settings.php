@@ -1,5 +1,19 @@
 <?php
 require_once 'register-login-validation.php';
+require_once 'change-information.php';
+
+
+$countries = [
+  'ar' => 'Argentina',
+  'br' => 'Brasil',
+  'bo' => 'Bolivia',
+  'co' => 'Colombia',
+  'ch' => 'Chile',
+  'ec' => 'Ecuador',
+  'pe' => 'Perú',
+  'pa' => 'Paraguay',
+  've' => 'Venezuela'
+];
 
 if (!alreadyLoggedIn()) {
   header("location: login.php");
@@ -7,10 +21,13 @@ if (!alreadyLoggedIn()) {
 
 $loggedUser = $_SESSION['loggedUser'];
 
+if ($_POST) {
+
+  $errorsInNewInfo = validateChanges ();
+
+}
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -129,7 +146,7 @@ $loggedUser = $_SESSION['loggedUser'];
               <li><a href="#">Grupos</a></li>
               <li><a href="#">Proyectos</a></li>
               <li><a href="#">Intereses</a></li>
-              <li><a href="settings.php">Configuración</a></li>
+              <li><a href="#">Configuración</a></li>
             </ul>
           </div>
         </div>
@@ -201,80 +218,77 @@ $loggedUser = $_SESSION['loggedUser'];
           </div>
         </section>
 
-      <section class="timeline-center">
-        <div class="publicacion">
-          <div class="usuario-foto-publicacion">
-            <a href="#"> <img class="foto-perfil-en-publicacion" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"> <span>Nombre de Usuario</span> </a>
-          </div>
-          <div class="fecha-hora">
-            <a href="#">4 de junio de 2019</a>
-          </div>
-          <div class="texto-publicacion">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ...</span>
-          </div>
-          <div class="ver-publ-container">
-            <div class="ir-a-publicacion">
-              <a href="#">Ver publicación</a>
-            </div>
-          </div>
+      <section class="settings">
+        <h3>Configuración</h4>
+        <div class="user-information">
+          <ul>
+            <li>Nombre Completo: <b><?= $loggedUser["fullName"] ?></b></li>
+            <li>Nombre de Usuario: <b><?= $loggedUser["userName"] ?></b></li>
+            <li>Correo Electrónico: <b><?= $loggedUser["email"] ?></b> </li>
+            <li>País de Nacimiento: <b>
+              <?php foreach ($countries as $code => $country) :
+                if ($code == $loggedUser["country"]) : echo $country;?></li>
+              <?php endif;?>
+              <?php endforeach;?></b>
+          </ul>
         </div>
+        <h3>Cambiar datos personales:</h3>
+        <form class="change-information" action="" method="post" enctype="multipart/form-data">
 
-        <div class="publicacion">
-          <div class="usuario-foto-publicacion">
-            <a href="#"> <img class="foto-perfil-en-publicacion" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"> <span>Nombre de Usuario</span> </a>
+          <div class="form-element">
+            <label for="fullName">
+              <b>Nombre Completo:</b> <?= $loggedUser["fullName"] ?>
+            </label>
+            <input class="form" type="text" name="newFullName" id="fullName" placeholder="Ingresa tu nuevo nombre...">
+                <?php if ( isset($errorsInNewInfo["inNewFullName"]) ) : ?>
+                  <div class="register-alert">
+                <?= $errorsInNewInfo["inNewFullName"] ?>
+                  </div>
+                <?php endif; ?>
           </div>
-          <div class="fecha-hora">
-            <a href="#">4 de junio de 2019</a>
-          </div>
-          <div class="texto-publicacion">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ...</span>
-            <div class="multimedia-publicacion">
-              <img src="deposito-de-archivos/img-02.jpg" alt="foto-de-cohousing-exterior">
-            </div>
-          </div>
-          <div class="ver-publ-container">
-            <div class="ir-a-publicacion">
-              <a href="#">Ver publicación</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="publicacion">
-          <div class="usuario-foto-publicacion">
-            <a href="#"> <img class="foto-perfil-en-publicacion" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"> <span>Nombre de Usuario</span> </a>
+          <div class="form-element">
+            <label for="password">
+              <b>Contraseña:</b>
+            </label>
+            <input class="form" type="password" name="password" id="password" placeholder="Ingresa tu contraseña...">
+              <?php if ( isset($errorsInNewInfo["inPassword"]) ) : ?>
+                <div class="register-alert">
+              <?= $errorsInNewInfo["inPassword"] ?>
+                </div>
+              <?php endif; ?>
+            <input class="form" type="password" name="newPassword" id="password" placeholder="Ingresa tu contraseña nueva...">
+            <input class="form" type="password" name="reNewPassword" id="password" placeholder="Repite tu contraseña nueva...">
           </div>
-          <div class="fecha-hora">
-            <a href="#">4 de junio de 2019</a>
-          </div>
-          <div class="texto-publicacion">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ...</span>
-          </div>
-          <div class="ver-publ-container">
-            <div class="ir-a-publicacion">
-              <a href="#">Ver publicación</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="publicacion">
-          <div class="usuario-foto-publicacion">
-            <a href="#"> <img class="foto-perfil-en-publicacion" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"> <span>Nombre de Usuario</span> </a>
+          <div class="form-element">
+            <label for="country">
+              <b>Nuevo País de Nacimiento:</b>
+              <select class="countries" name="country">
+                <option value="">Elegí un país</option>
+                  <?php foreach ($countries as $code => $country): ?>
+                  <option value="<?= $code ?>"> <?= $country ?> </option>
+                <?php endforeach; ?>
+              </select>
+            </label>
           </div>
-          <div class="fecha-hora">
-            <a href="#">4 de junio de 2019</a>
+
+          <div class="form-element">
+            <label for="profilePic" class="profile-pic-label-container">
+              <b>Nueva Imagen de perfil:</b>
+              <label class="profile-pic-label" for="profilePic">
+                <i class="fas fa-file-upload"></i>
+                Mi Archivo
+              </label>
+              <input class"form" type="file" name="profilePic" id="profilePic" value="" style="display: none;">
+            </label>
           </div>
-          <div class="texto-publicacion">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ...</span>
-            <div class="multimedia-publicacion">
-              <img src="deposito-de-archivos/img-02.jpg" alt="foto-de-cohousing-exterior">
-            </div>
+
+          <div class="form-element">
+            <input class="boton" type="submit" value="Guardar Cambios">
           </div>
-          <div class="ver-publ-container">
-            <div class="ir-a-publicacion">
-              <a href="#">Ver publicación</a>
-            </div>
-          </div>
-        </div>
+
+        </form>
 
       </section>
 

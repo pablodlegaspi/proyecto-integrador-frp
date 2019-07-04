@@ -76,11 +76,6 @@
   flex-wrap: wrap;
 }
 
-.foto-en-timeline {
-  padding: 5px;
-  background-color: white;
-}
-
 .perfil-timeline:hover {
   background-color: rgb(107, 55, 148);
 }
@@ -110,6 +105,10 @@
   display: none;
 }
 
+.timeline-anchor {
+  display: none;
+}
+
 .menu-timeline {
   display: flex;
   flex-direction: row;
@@ -120,6 +119,10 @@
 }
 
 .menu-hamburguesa {
+  display: none;
+}
+
+.dropdown-content {
   display: none;
 }
 
@@ -283,7 +286,7 @@ hr {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 40%;
-  margin: 0 2.5%
+  margin: 0 2.5%;
 }
 
 .publicacion {
@@ -440,10 +443,43 @@ hr {
     display: block;
   }
 
+  .timeline-anchor {
+    display: block;
+  }
+
+  .timeline-anchor a {
+    color: white;
+  }
+
+  .menu-hamburguesa:hover .dropdown-content {
+    display: block;
+  }
+
   .menu-hamburguesa a {
     color: white;
     text-decoration: none;
   }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: black;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  }
+
 
   .perfil-timeline span {
     display: none;

@@ -2,6 +2,10 @@
 
   require_once "register-login-validation.php";
 
+  if (alreadyLoggedIn()) {
+    header("location: timeline.php");
+  }
+
   $countries = [
     'ar' => 'Argentina',
 		'br' => 'Brasil',
@@ -54,8 +58,14 @@
     <section class="header-home">
       <a class="logo-home" href="_home.php"><img src="deposito-de-archivos/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
       <div class="login-register">
-        <a href="login.php">Iniciar Sesión</a>
-        <a href="register.php">Registrate</a>
+        <?php if (!alreadyLoggedIn()) : ?>
+          <a href="login.php">Iniciar Sesión</a>
+          <a href="register.php">Registrate</a>
+        <?php endif; ?>
+        <?php if (alreadyLoggedIn()) : ?>
+          <a href="timeline.php">Timeline</a>
+          <a href="profile.php">Mi Perfil</a>
+        <?php endif; ?>
       </div>
     </section>
 
@@ -147,8 +157,7 @@
               <b>País de Nacimiento:</b>
               <select class="countries" name="country">
                 <option value="">Elegí un país</option>
-                <?php foreach ($countries as $code => $country): ?>
-                  <!-- no entiendo bien esto de selected, lo use como referencia del ejercicio de cookies y session pero no lo entiendo, seguro en la clase de hoy (25/6) lo veamos -->
+                  <?php foreach ($countries as $code => $country): ?>
                   <option <?= isset($_POST["country"]) && $_POST["country"] == $code ? "selected" : "" ; ?> value="<?= $code ?>"> <?= $country ?> </option>
                 <?php endforeach; ?>
               </select>
@@ -164,7 +173,7 @@
                 <i class="fas fa-file-upload"></i>
                 Mi Archivo
               </label>
-              <input class"form" type="file" name="profilePic" id="profilePic" value="">
+              <input class"form" type="file" name="profilePic" id="profilePic" value="" style="display: none;">
             </label>
           </div>
           <?php if ( isset($errorsInRegister["inProfilePic"]) ) : ?>

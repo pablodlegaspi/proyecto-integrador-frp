@@ -2,6 +2,10 @@
 
   require_once "register-login-validation.php";
 
+  if (alreadyLoggedIn()) {
+    header("location: timeline.php");
+  }
+
   if ($_POST) {
 
   $userNameOrEmail = $_POST["userNameOrEmail"];
@@ -41,8 +45,14 @@
       <section class="header-home">
         <a class="logo-home" href="_home.php"><img src="deposito-de-archivos/Logo70x70.png" alt="logo-de-vecinos-colaborativos"></a>
         <div class="login-register">
-          <a href="login.php">Iniciar Sesión</a>
-          <a href="register.php">Registrate</a>
+          <?php if (!alreadyLoggedIn()) : ?>
+            <a href="login.php">Iniciar Sesión</a>
+            <a href="register.php">Registrate</a>
+          <?php endif; ?>
+          <?php if (alreadyLoggedIn()) : ?>
+            <a href="timeline.php">Timeline</a>
+            <a href="profile.php">Mi Perfil</a>
+          <?php endif; ?>
         </div>
       </section>
 

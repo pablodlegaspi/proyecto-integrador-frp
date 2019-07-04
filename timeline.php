@@ -23,7 +23,7 @@ $loggedUser = $_SESSION['loggedUser'];
       <section class="header-timeline">
         <div class="sub-header-timeline">
 
-          <a class="logo" href="timeline.php"><img src="deposito-de-archivos/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
+          <a class="logo" href="_home.php"><img src="deposito-de-archivos/Logo50x50.png" alt="logo-de-vecinos-colaborativos"></a>
 
           <div class="buscador-area">
             <input class="buscador" type="text" name="buscador" value="" placeholder="Buscar...">
@@ -34,7 +34,15 @@ $loggedUser = $_SESSION['loggedUser'];
             <a href="#"><i class="fas fa-search"></i></a>
           </div>
 
+          <div class="timeline-anchor">
+            <a href="timeline.php"><i class="fas fa-home"></i></a>
+          </div>
+
           <div class="menu-timeline">
+            <a href="timeline.php"><i class="fas fa-home"></i></a>
+            <div class="separador">
+              <span>|</span>
+            </div>
             <a href="contactos.php"><i class="fas fa-user-friends"></i></a>
             <div class="separador">
               <span>|</span>
@@ -52,10 +60,25 @@ $loggedUser = $_SESSION['loggedUser'];
 
           <div class="menu-hamburguesa">
             <a href="#"><i class="fas fa-bars"></i></a>
+            <div class="dropdown-content">
+              <a href="contactos.php">Mis Contactos</a>
+              <a href="#">Agregar Contactos</a>
+              <a href="#">Crear</a>
+              <a href="#">Notificaciones</a>
+            </div>
           </div>
 
           <div class="perfil-timeline">
-            <a href="profile.php"> <span><?= $loggedUser["fullName"] ?></span> <img class="foto-en-timeline" src="deposito-de-archivos/user-24px.png" alt="foto-de-perfil"></a>
+            <a href="profile.php"> <span><?= $loggedUser['fullName'] ?></span>
+              <div class="profile-pic-in-navbar" style="
+              height: 34px;
+              width: 34px;
+              background-image: url('<?= $loggedUser['profilePicRoute'] ?>');
+              background-size: cover;
+              background-position: center;
+              border-radius: 100%;">
+              </div>
+            </a>
           </div>
 
           <div class="logout">

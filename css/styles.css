@@ -9,6 +9,7 @@
 @import "_timeline.css";
 @import "_profile.css";
 @import "_contactos.css";
+@import "_settings.css";
 
 
 * {
@@ -18,6 +19,6 @@
 body {
   margin: auto;
   background-color: #e9ebee;
-  font-size: 18px;
+  font-size: 16px;
   font-family: Open Sans, sans-serif;
 }
