@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-08-2019 a las 18:57:34
+-- Tiempo de generación: 01-08-2019 a las 21:17:17
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -32,11 +32,12 @@ CREATE TABLE `posts` (
   `id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `title` text,
-  `description` text,
-  `image` varchar(1000) DEFAULT NULL,
-  `video` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `title` varchar(200) CHARACTER SET utf8 NOT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
+  `image` varchar(1000) CHARACTER SET utf8 NOT NULL,
+  `video` varchar(1000) CHARACTER SET utf8 NOT NULL,
+  `user_id` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -45,24 +46,16 @@ CREATE TABLE `posts` (
 --
 
 CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(11) UNSIGNED NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `first_name` varchar(100) NOT NULL,
+  `first_name` varchar(100) NOT NULL DEFAULT '',
   `last_name` varchar(100) NOT NULL,
-  `password` varchar(1000) NOT NULL,
-  `country` varchar(100) NOT NULL,
-  `profile_pic` varchar(1000) NOT NULL,
-  `email` varchar(500) NOT NULL,
-  `project_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `created_at`, `updated_at`, `first_name`, `last_name`, `password`, `country`, `profile_pic`, `email`, `project_id`) VALUES
-(1, '2019-08-01 16:54:22', '2019-08-01 16:54:22', 'Pablo', 'Legaspi', 'wej·$%2&54ojk346º234', 'Argentina', 'asdfasdf/asdf/asdfa234&/2134', 'pablodlegaspi@gmail.com', 1);
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `password` varchar(100) NOT NULL DEFAULT '',
+  `country` varchar(10) NOT NULL DEFAULT '',
+  `image` varchar(60) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
@@ -72,7 +65,8 @@ INSERT INTO `users` (`id`, `created_at`, `updated_at`, `first_name`, `last_name`
 -- Indices de la tabla `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `posts_user_id_foreign` (`user_id`);
 
 --
 -- Indices de la tabla `users`
@@ -85,16 +79,20 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `posts`
---
-ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
